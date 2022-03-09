@@ -7,30 +7,75 @@
     <title>Tabelas</title>
 
     <style>
+
+        h1{
+            margin: auto;
+            padding-bottom: 20px;
+            text-align: center;
+        }
+       
         body{
             font-family: Arial, Helvetica, sans-serif;
         }
 
+        
         table{
-            width:500px;
+             width:500px;
             border-collapse: collapse;
+            margin: auto;
         }
 
-        td, th{
+        table > tbody{
             border: 1px solid black;
+        }
+        tbody > th,td{
+            border: 1px solid black;
+
+        }
+        td, th{
             padding: 10px;
+            /* border: 1px solid black; */
         }
 
-        thead, tfoot{
+        caption{
+            font-size:1.5em ;
+            font-weight: bold;
+            padding: 10px;
+            background-color: lightgrey;
+            border: 1px solid darkgray;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+        }
+        
+
+         thead{
             background-color: darkorange;
             color:black;
+            border: 1px solid black;
+        } 
+        
+        tfoot > tr{
+            background-color: darkorange;
+            color:black;
+            /* border: 1px solid black; */
         }
-
+    
         td.num{
             text-align: right;
         }
 
+       #borda-esquerda{
+            border: none; 
+            border-bottom-left-radius: 5px;
+       }
+
+       #borda-direita{
+            border: none; 
+            border-bottom-right-radius: 5px;
+       }
+                      
     </style>
+
 </head>
 <body>
     <h1>Uso de tabelas grandes</h1>
@@ -38,6 +83,7 @@
     <!--
         ANATOMIA PARA TABELAS GRANDES
         TABLE
+            CAPTION
             THEAD
                 TR, TD, TH
 
@@ -50,18 +96,20 @@
     -->
 
     <table>
+        
+        <caption>Populacao das Unidades Federativas</caption>
 
         <thead>
             <tr>
-                <th>Estado</th>
-                <th>populacao</th>
+                <th scope="col">Estado</th>
+                <th scope="col" style="width:100px">populacao</th>
             </tr>
         </thead>
 
 
         <tbody>
             <tr>
-                <td>Sao Paulo</td>
+                <td >Sao Paulo</td>
                 <td class="num">46 649 132</td>
             </tr>
             <tr>
@@ -149,7 +197,7 @@
                 <td class="num">2 338 474</td>
             </tr>
             <tr>
-                <td> Rondônia</td>
+                <td > Rondônia</td>
                 <td class="num">1 815 278</td>
             </tr>
             <tr>
@@ -172,15 +220,15 @@
         </tbody>
 
 
-        <tfoot>
-            <tr>
-                <th>Total de habitantes</th>
-                <td class="num"><strong>255 696 776</strong></td>
+        <tfoot id="borda-geral">
+            <tr >
+                <th id="borda-esquerda" scope="row">Total de habitantes</th>
+                <td id="borda-direita" class="num"><strong>255 696 776</strong></td>
             </tr>
 
         </tfoot>
 
-    </table>
+      </table>
     
 
 </body>
