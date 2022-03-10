@@ -23,18 +23,13 @@
              width:500px;
             border-collapse: collapse;
             margin: auto;
+            position: relative;
         }
 
-        table > tbody{
-            border: 1px solid black;
-        }
-        tbody > th,td{
-            border: 1px solid black;
 
-        }
         td, th{
             padding: 10px;
-            /* border: 1px solid black; */
+            border: 1px solid black; 
         }
 
         caption{
@@ -43,41 +38,36 @@
             padding: 10px;
             background-color: lightgrey;
             border: 1px solid darkgray;
-            border-top-left-radius: 5px;
-            border-top-right-radius: 5px;
         }
         
 
-         thead{
+         thead, tfoot{
             background-color: darkorange;
             color:black;
-            border: 1px solid black;
         } 
         
-        tfoot > tr{
-            background-color: darkorange;
-            color:black;
-            /* border: 1px solid black; */
+        thead > tr > th{
+            position: sticky;
+            top: -1px;;
+            background-color:darkorange ;
+            
         }
-    
+
         td.num{
             text-align: right;
         }
 
-       #borda-esquerda{
-            border: none; 
-            border-bottom-left-radius: 5px;
+
+        tbody > tr:nth-child(2n-1){ /* ou odd(impar) ...*/
+           background-color: white;
        }
 
-       #borda-direita{
-            border: none; 
-            border-bottom-right-radius: 5px;
-       }
 
-       tbody > tr:nth-child(2n){ /* ou even(par) / 2n-1, odd(impar) ...*/
+       tbody > tr:nth-child(2n){ /* ou even(par)...*/
            background-color: lightgray;
        }
-                      
+              
+      
     </style>
 
 </head>
@@ -98,7 +88,7 @@
                 TR, TD, TH
 
     -->
-
+   
     <table>
         
         <caption>Populacao das Unidades Federativas</caption>
@@ -223,7 +213,7 @@
 
         </tbody>
 
-
+        
         <tfoot id="borda-geral">
             <tr >
                 <th id="borda-esquerda" scope="row">Total de habitantes</th>
@@ -232,8 +222,18 @@
 
         </tfoot>
 
+
       </table>
-    
+
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis nostrum eaque laborum, reiciendis magni distinctio maxime. Inventore quam fuga, necessitatibus enim atque eius, commodi id reprehenderit, tempore ad excepturi perspiciatis? Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto vel aperiam nostrum voluptas dolorum quis, atque velit fuga, praesentium quo eligendi reiciendis accusamus est possimus pariatur vero laboriosam eius distinctio. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis molestiae sapiente vero minima repellat alias, reprehenderit voluptates tenetur cum? Accusantium odio autem, provident veniam explicabo id cumque voluptatum? Laudantium, praesentium. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non totam modi, quidem accusantium deleniti quod eius atque impedit cumque expedita tempora nisi. Praesentium necessitatibus commodi, vel excepturi similique nihil modi!</p>
+
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis nostrum eaque laborum, reiciendis magni distinctio maxime. Inventore quam fuga, necessitatibus enim atque eius, commodi id reprehenderit, tempore ad excepturi perspiciatis? Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto vel aperiam nostrum voluptas dolorum quis, atque velit fuga, praesentium quo eligendi reiciendis accusamus est possimus pariatur vero laboriosam eius distinctio. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis molestiae sapiente vero minima repellat alias, reprehenderit voluptates tenetur cum? Accusantium odio autem, provident veniam explicabo id cumque voluptatum? Laudantium, praesentium. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non totam modi, quidem accusantium deleniti quod eius atque impedit cumque expedita tempora nisi. Praesentium necessitatibus commodi, vel excepturi similique nihil modi!</p>
+
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis nostrum eaque laborum, reiciendis magni distinctio maxime. Inventore quam fuga, necessitatibus enim atque eius, commodi id reprehenderit, tempore ad excepturi perspiciatis? Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto vel aperiam nostrum voluptas dolorum quis, atque velit fuga, praesentium quo eligendi reiciendis accusamus est possimus pariatur vero laboriosam eius distinctio. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis molestiae sapiente vero minima repellat alias, reprehenderit voluptates tenetur cum? Accusantium odio autem, provident veniam explicabo id cumque voluptatum? Laudantium, praesentium. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non totam modi, quidem accusantium deleniti quod eius atque impedit cumque expedita tempora nisi. Praesentium necessitatibus commodi, vel excepturi similique nihil modi!</p>
+
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis nostrum eaque laborum, reiciendis magni distinctio maxime. Inventore quam fuga, necessitatibus enim atque eius, commodi id reprehenderit, tempore ad excepturi perspiciatis? Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto vel aperiam nostrum voluptas dolorum quis, atque velit fuga, praesentium quo eligendi reiciendis accusamus est possimus pariatur vero laboriosam eius distinctio. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis molestiae sapiente vero minima repellat alias, reprehenderit voluptates tenetur cum? Accusantium odio autem, provident veniam explicabo id cumque voluptatum? Laudantium, praesentium. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non totam modi, quidem accusantium deleniti quod eius atque impedit cumque expedita tempora nisi. Praesentium necessitatibus commodi, vel excepturi similique nihil modi!</p>
+
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis nostrum eaque laborum, reiciendis magni distinctio maxime. Inventore quam fuga, necessitatibus enim atque eius, commodi id reprehenderit, tempore ad excepturi perspiciatis? Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto vel aperiam nostrum voluptas dolorum quis, atque velit fuga, praesentium quo eligendi reiciendis accusamus est possimus pariatur vero laboriosam eius distinctio. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis molestiae sapiente vero minima repellat alias, reprehenderit voluptates tenetur cum? Accusantium odio autem, provident veniam explicabo id cumque voluptatum? Laudantium, praesentium. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non totam modi, quidem accusantium deleniti quod eius atque impedit cumque expedita tempora nisi. Praesentium necessitatibus commodi, vel excepturi similique nihil modi!</p>
 
 </body>
 </html>
