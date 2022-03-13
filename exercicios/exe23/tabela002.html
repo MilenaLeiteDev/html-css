@@ -21,7 +21,8 @@
         
         table{
              width:500px;
-            border-collapse: collapse;
+            border-collapse: separate;
+            border-spacing: 0;
             margin: auto;
             position: relative;
         }
@@ -38,6 +39,14 @@
             padding: 10px;
             background-color: lightgrey;
             border: 1px solid darkgray;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+        }
+
+        tfoot#borda-geral {
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+            display: block;
         }
         
 
@@ -65,6 +74,29 @@
 
        tbody > tr:nth-child(2n){ /* ou even(par)...*/
            background-color: lightgray;
+       }
+
+       #theFooter {
+           display: flex;
+           width: 498px;
+           background-color: darkorange;
+           justify-content: space-between;
+           margin: auto;
+           border-bottom-left-radius: 5px;
+           border-bottom-right-radius: 5px;
+           border: solid 1px black;
+           margin-top: -1px;
+       }
+
+       #some-title {
+            padding: 10px;
+            width: 355.9px;
+            border-right: 1.5px solid black;
+            border-top: 0;
+       }
+
+       #brazil {
+        padding: 10px;
        }
               
       
@@ -214,16 +246,21 @@
         </tbody>
 
         
-        <tfoot id="borda-geral">
-            <tr >
+        <!-- <tfoot id="borda-geral">
+            <tr>
                 <th id="borda-esquerda" scope="row">Total de habitantes</th>
                 <td id="borda-direita" class="num"><strong>255 696 776</strong></td>
             </tr>
 
-        </tfoot>
+        </tfoot> -->
 
 
       </table>
+
+      <div id="theFooter">
+          <div id="some-title">Total habitantes</div>
+          <div id="brazil">255 696 776</div>
+      </div>
 
       <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis nostrum eaque laborum, reiciendis magni distinctio maxime. Inventore quam fuga, necessitatibus enim atque eius, commodi id reprehenderit, tempore ad excepturi perspiciatis? Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto vel aperiam nostrum voluptas dolorum quis, atque velit fuga, praesentium quo eligendi reiciendis accusamus est possimus pariatur vero laboriosam eius distinctio. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis molestiae sapiente vero minima repellat alias, reprehenderit voluptates tenetur cum? Accusantium odio autem, provident veniam explicabo id cumque voluptatum? Laudantium, praesentium. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non totam modi, quidem accusantium deleniti quod eius atque impedit cumque expedita tempora nisi. Praesentium necessitatibus commodi, vel excepturi similique nihil modi!</p>
 
